@@ -10,7 +10,7 @@ const About = () => {
   };
 
   return (
-    <div className="about">
+    <div className="about" style={{ backgroundColor: "#E3F2FD" }}>
       <div className="header">
         <h1>About Us</h1>
         <p>
@@ -18,7 +18,11 @@ const About = () => {
           applications.
         </p>
       </div>
-      <img src={teamPic} alt="Our team" />
+      <img
+        src={teamPic}
+        alt="Our team"
+        style={{ width: "1000px", height: "700px" }}
+      />
       <div className="content">
         <h2>Our Team</h2>
         <p>
@@ -42,7 +46,11 @@ const About = () => {
         <div className="contact-overlay">
           <div className="contact-card">
             <h2>Contact Us</h2>
-            <form>
+            <form
+              action="mailto:virenvariya7@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
               <label htmlFor="name">Name:</label>
               <input type="text" id="name" name="name" />
               <label htmlFor="email">Email:</label>

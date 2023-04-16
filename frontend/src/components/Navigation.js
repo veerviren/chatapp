@@ -14,29 +14,48 @@ function Navigation() {
     window.location.replace("/");
   }
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" style={{ backgroundColor: "#3A1078" }}>
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>
-            <img src={logo} alt="logo" style={{ width: 50, height: 50 }} />
+            <p
+              style={{
+                color: "white",
+                alignContent: "center",
+                blockSize: "20px",
+              }}
+            >
+              ChatApp
+            </p>
           </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             {!user && (
-              <LinkContainer to="/login">
-                <Nav.Link>Login</Nav.Link>
-              </LinkContainer>
+              <Button
+                href="/Login"
+                style={{ backgroundColor: "#2F58CD", margin: "10px" }}
+              >
+                Login
+              </Button>
             )}
-            <LinkContainer to="/chat">
-              <Nav.Link>Chat</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/about">
-              <Nav.Link>About Us</Nav.Link>
-            </LinkContainer>
+
+            <Button
+              href="/chat"
+              style={{ backgroundColor: "#2F58CD", margin: "10px" }}
+            >
+              Chat
+            </Button>
+            <Button
+              href="/about"
+              style={{ backgroundColor: "#2F58CD", margin: "10px" }}
+            >
+              About us
+            </Button>
             {user && (
               <NavDropdown
+                style={{ backgroundColor: "#2F58CD", margin: "10px"}}
                 title={
                   <>
                     <img
